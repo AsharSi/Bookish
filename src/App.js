@@ -1,9 +1,14 @@
-function App() {
+import './App.css';
+import Navbar from './components/navbar/Navbar'
+import Home from './components/home/Home';
+
+export default function App() {
   return (
     <>
-      <h2>Hello World</h2>
+      <Navbar />
+      <div id="main">
+        <Home />
+      </div>
     </>
   );
 }
-
-export default App;
