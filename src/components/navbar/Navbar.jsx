@@ -3,6 +3,7 @@ import './Navbar.css'
 import Hamburger from './hamburger/Hamburger'
 import Navigation from './Navigation'
 import MobileNavigation from './MobileNavigation'
+import { BsLayoutTextSidebar } from 'react-icons/bs'
 
 export default function Navbar() {
 
@@ -20,10 +21,17 @@ export default function Navbar() {
         setNavOpen(!navOpen)
     }
 
+    const openSidebar = () => {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.classList.toggle('openSidebar')
+    }
+
     return (
         <>
             <nav>
                 <div>
+                    <BsLayoutTextSidebar className='BsSidebar' onClick={openSidebar} />
+                    
                     <a id="nav_brand" href='/'>
                         Bookish
                     </a>

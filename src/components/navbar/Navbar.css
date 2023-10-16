@@ -76,3 +76,15 @@ nav {
         transform: translateX(0%);
     }
 }
+
+.BsSidebar {
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 0px 1rem;
+}
+
+.BsSidebar:hover {
+    color: #c8b014;
+}
