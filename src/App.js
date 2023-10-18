@@ -11,7 +11,7 @@ export default function App() {
       <Navbar />
       <div id="main">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>

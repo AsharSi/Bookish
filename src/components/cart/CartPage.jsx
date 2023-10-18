@@ -1,8 +1,25 @@
 import './CartPage.css'
 import Cart from './Cart'
-import data from '../data/cart'
+// import data from '../data/cart'
+import { useContext, useEffect } from 'react'
+import noteContext from '../context/noteContext'
 
 export default function CartPage() {
+    const context = useContext(noteContext)
+    const { cartItems, totalCost, setTotalCost } = context;
+
+    // const data = JSON.parse(localStorage.getItem('cartItems'))
+    const data = cartItems
+
+    useEffect(() => {
+        let total = 0
+        if (data !== null) {
+            data.map((item) => {
+                total += parseFloat(item.price.slice(1))
+            })
+        }
+        setTotalCost(total.toFixed(2))
+    })
 
     return (
         <>
@@ -20,7 +37,7 @@ export default function CartPage() {
 
                         <div className="cart_total_container">
                             <h3>Subtotal</h3>
-                            <p className='cart_total'> $0.00</p>
+                            <p className='cart_total'> ${totalCost}</p>
                             <button className='cart_btn' >Proceed to Checkout</button>
                         </div>
 

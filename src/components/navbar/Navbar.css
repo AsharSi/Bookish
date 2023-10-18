@@ -1,6 +1,7 @@
 nav {
     background-color: #070707;
     padding: 1.5rem 5rem;
+    padding-bottom: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,6 +9,7 @@ nav {
     top: 0;
     z-index: 999;
     width: 100%;
+    min-height: 10vh;
 }
 
 #nav_brand {
@@ -87,4 +89,32 @@ nav {
 
 .BsSidebar:hover {
     color: #c8b014;
+}
+
+.bookCategory {
+    position: sticky;
+    top: 10vh;
+    z-index: 999;
+    padding: 0 5rem;
+
+    background-color: #070707;
+}
+
+.bookCategory_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookCategory_list a {
+    margin: 0.5rem 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.bookCategory_list a:hover {
+    color: #8d0062;
 }
