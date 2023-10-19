@@ -1,5 +1,5 @@
 import './Cards.css';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import noteContext from '../context/noteContext';
 
 export default function Cards(props) {

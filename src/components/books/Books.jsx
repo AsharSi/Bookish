@@ -1,8 +1,7 @@
-import {useState, useEffect, useContext } from 'react'  
+import {useState, useEffect } from 'react'  
 import Card from './Cards'
 import './Books.css'
 import axios from 'axios'
-import noteContext from '../context/noteContext'
 
 export default function Books(props) {
 
@@ -21,7 +20,7 @@ export default function Books(props) {
 
     useEffect(() => {
         getBooks()
-    }, [])
+    });
 
     return (
         <>

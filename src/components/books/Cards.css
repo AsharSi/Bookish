@@ -4,8 +4,9 @@
     padding: 0.5rem;
     min-height: 500px;
     border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0.5rem #00000033;
+    transition: all 0.3s ease-in-out;   
+    background-color: #fff;
 }
 
 .home_container .cards .card:hover {
